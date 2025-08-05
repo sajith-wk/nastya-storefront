@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.6% 91.4%;
+    --input: 214.3 31.6% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html, body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Custom dot-pulse animation */
+.dot-pulse {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(24, 14, 14, 0.75);
+  animation: pulse-glow 6s infinite ease-out;
+  transition: transform 0.1s ease;
+}
+
+.dot-pulse::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border: 0.1px solid rgb(255, 255, 255);
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  animation: pulse-ring 6s infinite ease-in;
+  z-index: -1;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.5);
+    box-shadow: 0 0 10px rgba(53, 39, 39, 0.75);
+  }
+  8.33% { /* 0.5s - First popup */
+    transform: scale(1.4);
+    box-shadow: 0 0 25px rgb(39, 26, 26);
+  }
+  16.67% { /* 1s - Back to normal */
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(31, 22, 22, 0.75);
+  }
+  41.67% { /* 2.5s - Stay normal during first wave */
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(34, 21, 21, 0.75);
+  }
+  50% { /* 3s - Second popup */
+    transform: scale(1.4);
+    box-shadow: 0 0 25px rgb(34, 22, 22);
+  }
+  58.33% { /* 3.5s - Back to normal */
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(24, 14, 14, 0.75);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(22, 14, 14, 0.75);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  16.67% { /* Wait for first popup (1s) */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  20% { /* First wave starts at 1.2s */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  41.67% { /* First wave ends at 2.5s */
+    transform: translate(-50%, -50%) scale(11);
+    opacity: 0;
+  }
+  58.33% { /* Wait for second popup (3.5s) */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  61.67% { /* Second wave starts at 3.7s */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  83.33% { /* Second wave ends at 5s */
+    transform: translate(-50%, -50%) scale(11);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(11);
+    opacity: 0;
+  }
+}
+/* New blink animation for loading text */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  
+}
+
+.animate-blink {
+  animation: blink 1.5s infinite;
+}

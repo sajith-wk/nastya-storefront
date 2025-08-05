@@ -1,0 +1,48 @@
+# Node modules
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional)
+.vscode/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Coverage reports
+coverage/
+
+# Next.js export output
+out/
+
+# Optional: Ignore build artifacts
+dist/
+
+# Optional: Ignore local Firebase emulator data (if using Firebase)
+.firebase/
+.firebaserc
+
+# Optional: Ignore vercel's local dev environment file
+.vercel
+
+# Optional: Ignore turbo build cache (if using Turborepo)
+turbo/
