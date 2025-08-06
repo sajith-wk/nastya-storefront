@@ -7,8 +7,8 @@ export const virtualScenes = [
     prev: '',
     // Hotspot data for room-1 will be passed from page.tsx
     hotspotPositions: [
-        { top: "30%", left: "16.40%", animated: true }, // Example: Hoodie on couch (left)
-        { top: "30%", left: "44.27%", animated: true }, // Example: T-shirt on rug (middle)
+        { top: "30%", left: "12.40%", animated: true }, // Example: Hoodie on couch (left)
+        { top: "30%", left: "42.27%", animated: true }, // Example: T-shirt on rug (middle)
         { top: "30%", left: "72.13%", animated: true }, // Example: Pink shoes (top right)
       
     ],
@@ -21,8 +21,8 @@ export const virtualScenes = [
     prev: "room-1",
     // You can define specific hotspots for room-2 here or pass them dynamically
      hotspotPositions: [
-      { top: "30%", left: "16.40%", animated: true }, // Example: Hoodie on couch (left)
-      { top: "30%", left: "44.27%", animated: true }, // Example: T-shirt on rug (middle)
+      { top: "30%", left: "12.40%", animated: true }, // Example: Hoodie on couch (left)
+      { top: "30%", left: "42.27%", animated: true }, // Example: T-shirt on rug (middle)
       { top: "30%", left: "72.13%", animated: true }, // Example: Pink shoes (top right)
       
     ],
@@ -35,8 +35,8 @@ export const virtualScenes = [
     prev: "room-2",
     // You can define specific hotspots for room-3 here or pass them dynamically
     hotspotPositions: [
-      { top: "30%", left: "16.40%", animated: true }, // Example: Hoodie on couch (left)
-      { top: "30%", left: "44.27%", animated: true }, // Example: T-shirt on rug (middle)
+      { top: "30%", left: "12.40%", animated: true }, // Example: Hoodie on couch (left)
+      { top: "30%", left: "42.27%", animated: true }, // Example: T-shirt on rug (middle)
       { top: "30%", left: "72.13%", animated: true }, // Example: Pink shoes (top right)
       
     ],
