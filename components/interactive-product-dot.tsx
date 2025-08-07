@@ -26,20 +26,21 @@ export default function InteractiveProductDot({ product, position, animated = fa
     >
       {/* 📸 Product Image */}
       {product.featuredImage?.url && (
-  <div
-    className={cn(
-      "w-52 h-64",                // 📱 Mobile: bigger size than before (was w-44 h-52)
-      "md:w-52 md:h-64",          // 💻 Desktop: same size (unchanged)
-      "bg-transparent rounded-md shadow-[6px_6px_12px_rgba(0,0,0,0.12),2px_2px_4px_rgba(0,0,0,0.08)] mb-4"
+        <div
+          className={cn(
+           // "w-32 md:w-40 lg:w-52 aspect-square", // 🔄 Responsive widths, fixed square shape
+            "w-48 md:w-56 lg:w-64 aspect-square", // 📱 Larger sizes across all breakpoints
+            "bg-transparent rounded-md shadow-[6px_6px_12px_rgba(0,0,0,0.12),2px_2px_4px_rgba(0,0,0,0.08)] mb-4"
+          )}
+        >
+          <img
+            src={product.featuredImage?.url}
+            alt={product.title}
+            className="w-full h-full object-cover rounded-sm"
+          />
+        </div>
     )}
-  >
-    <img
-      src={product.featuredImage?.url}
-      alt={product.title}
-      className="w-full h-full object-cover rounded-sm"
-    />
-  </div>
-)}
+
 
       {/* ⭕ Dot */}
       <div
