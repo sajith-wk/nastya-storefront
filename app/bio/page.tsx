@@ -17,9 +17,7 @@ export default function BioPage() {
          <p>
           Today, Nastya Rovenskaya continues to break new ground in contemporary art. Her work is celebrated not only for its striking aesthetic but also for its profound exploration of themes such as freedom, rebellion, and the human experience.
         </p>
-         <p>
-          Her work embodies a blend of tenderness and simplicity, capturing the beauty of life in its most delicate forms, and offering a sense of serenity and optimism to those who experience it.
-        </p>
+         
       </div>
     </div>
   )
