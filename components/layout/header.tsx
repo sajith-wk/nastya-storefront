@@ -34,7 +34,7 @@ export function Header({ isTransparent = false }: HeaderProps) {
       {/* Center Site Logo */}
       <div className="flex-1 flex justify-center">
         <Link href="/" className="flex items-center justify-center text-2xl font-bold">
-          Nastya
+          Rovenskaya
         </Link>
       </div>
 
