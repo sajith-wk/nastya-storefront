@@ -21,9 +21,23 @@ export function Footer({ isTransparent = false, onMenuClick }: FooterProps) {
       )}
     >
       {/* Desktop Footer Content (hidden on mobile) */}
-      <p className={cn("hidden sm:block text-xs", isTransparent ? "text-black" : "text-muted-foreground")}>
-        &copy; {new Date().getFullYear()} Nastya Rovenskaya. All rights reserved. Operated by Gol Art.
-      </p>
+      <p
+  className={cn(
+    "hidden sm:block text-xs",
+    isTransparent ? "text-black" : "text-muted-foreground"
+  )}
+>
+  &copy; {new Date().getFullYear()} Nastya Rovenskaya. All rights reserved. Operated by{" "}
+  <a
+    href="https://golart.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white"
+  >
+    Gol Art
+  </a>.
+</p>
+
       <nav className="hidden sm:ml-auto sm:flex gap-4 sm:gap-6">
         <Link
           href="https://golart.com/policies/terms-of-service"
