@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-const MOBILE_BREAKPOINT = 1026 // Devices with width < 1025px will be considered mobile/tablet
+const MOBILE_BREAKPOINT = 1100 // Devices with width < 1025px will be considered mobile/tablet
 
 export function useIsMobile() {
   const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined)
