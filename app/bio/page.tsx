@@ -2,7 +2,7 @@ export default function BioPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">About Nastya Rovenskaya</h1>
-      <div className="prose max-w-none">
+      <div className="prose max-w-none space-y-6 leading-relaxed">
         {}
         <p>
           Nastya Rovenskaya was born in Saint Petersburg, Russia, in 1976. A master of pop and street art, she is recognized as one of the most innovative and exciting artists on the international stage.
