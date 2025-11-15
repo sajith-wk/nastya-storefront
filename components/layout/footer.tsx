@@ -27,15 +27,7 @@ export function Footer({ isTransparent = false, onMenuClick }: FooterProps) {
     isTransparent ? "text-black" : "text-muted-foreground"
   )}
 >
-  &copy; {new Date().getFullYear()} Nastya Rovenskaya. All rights reserved. Operated by{" "}
-  <a
-    href="https://golart.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white"
-  >
-    Gol Art
-  </a>.
+  &copy; {new Date().getFullYear()} Nastya Rovenskaya. All rights reserved. 
 </p>
 
       <nav className="hidden sm:ml-auto sm:flex gap-4 sm:gap-6">
